@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sunbeam Stitches — made by Mac</title>
+<style>
+:root{--yellow:#f9c62b;--light:#fff8d6;--nav:#ffe37a;--gold:#d99a12;--brown:#70460b;--cream:#fffdf2;--green:#d9e9c5}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Georgia,serif;background:var(--light);color:#5b4218}
+header{padding:48px 7%;background:var(--yellow);text-align:center;border-bottom:3px solid var(--gold)}
+h1{margin:0;font-size:clamp(2.4rem,7vw,4.8rem);letter-spacing:.04em;color:var(--brown);text-shadow:2px 2px #ffe994}
+header p{margin:8px 0 0;font-size:1.1rem;font-style:italic}
+nav{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:18px;background:var(--nav);position:sticky;top:0;z-index:10}
+button,.btn{border:2px solid var(--gold);background:#fffdf0;color:#5b4218;border-radius:999px;padding:10px 17px;cursor:pointer;font-weight:bold}
+button:hover,.btn:hover{background:#ffd34f}
+.hero,.section{max-width:1050px;margin:auto;padding:48px 7%}
+.hero{text-align:center}
+.hero h2{font-size:2.1rem;margin:0 0 12px}
+.hero p,.muted{font-family:Arial,sans-serif;line-height:1.6}
+.pill{display:inline-block;padding:7px 12px;border-radius:999px;background:var(--green);margin:4px;font-family:Arial,sans-serif}
+.notice{background:#e5f0d9;border-radius:18px;padding:18px;margin:20px 0;font-family:Arial,sans-serif}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:var(--cream);border:2px solid #e7bd42;border-radius:22px;padding:22px;box-shadow:0 5px 18px #8b681c18}
+.card h3{margin-top:0}
+.price{font-size:1.2rem;font-weight:bold;color:#a56508;margin:10px 0}
+.form{display:grid;gap:12px;max-width:650px}
+.form input,.form textarea,.form select{width:100%;padding:12px;border-radius:12px;border:2px solid #ead17d;background:#fffef6;color:#5b4218;font:inherit}
+.form textarea{min-height:110px}
+.hidden{display:none}
+footer{text-align:center;padding:30px;background:var(--yellow);font-family:Arial,sans-serif;font-size:.9rem;color:var(--brown)}
+.small{font-size:.9rem}
+</style>
+</head>
+<body>
+<header>
+  <h1>☀️ Sunbeam Stitches</h1>
+  <p>made by Mac · handmade crochet with a little sunshine</p>
+</header>
+
+<nav>
+  <button onclick="show('home')">Home</button>
+  <button onclick="show('shop')">New Releases</button>
+  <button onclick="show('pre')">Pre-Orders</button>
+  <button onclick="show('custom')">Custom Orders</button>
+</nav>
+
+<section id="home" class="hero">
+  <span class="pill">☀️ sunny</span>
+  <span class="pill">🧶 handmade</span>
+  <span class="pill">🌼 made by Mac</span>
+  <h2>A little sunshine, stitched by hand. ☀️</h2>
+  <p>Welcome to Sunbeam Stitches! Browse new crochet releases, reserve pieces before yoga, and request a custom order.</p>
+  <div class="notice">
+    <b>In-person only:</b> no shipping or online delivery. Pre-orders are holds to pay for and pick up at the next yoga event.
+  </div>
+  <p class="small">✨ Thank you for supporting a small handmade business!</p>
+</section>
+
+<section id="shop" class="section hidden">
+  <h2>🧶 Current Collection</h2>
+  <div class="grid">
+    <article class="card"><h3>🌸 Flower Keychain</h3><p class="muted">A tiny colorful charm.</p><div class="price">$3</div><button class="btn" onclick="show('pre')">Reserve</button></article>
+    <article class="card"><h3>🎀 Little Scrunchie</h3><p class="muted">A smaller everyday scrunchie.</p><div class="price">$4</div><button class="btn" onclick="show('pre')">Reserve</button></article>
+    <article class="card"><h3>🎀 Big Scrunchie</h3><p class="muted">Soft, fluffy, and market-tested.</p><div class="price">$5</div><button class="btn" onclick="show('pre')">Reserve</button></article>
+    <article class="card"><h3>🌼 Simple Bracelet</h3><p class="muted">A simple handmade bracelet.</p><div class="price">$4</div><button class="btn" onclick="show('pre')">Reserve</button></article>
+    <article class="card"><h3>🍁 Maple Leaf Coaster</h3><p class="muted">A handmade fall favorite.</p><div class="price">$7</div><button class="btn" onclick="show('pre')">Reserve</button></article>
+  </div>
+  <h2>🌈 Everyday Collection</h2><div class="grid">
+    <article class="card"><h3>🌼 Mini Flower</h3><p class="muted">A tiny handmade flower.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🌻 Sunflower</h3><p class="muted">A sunny little flower.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>☀️ Mini Sun</h3><p class="muted">A cheerful sunshine charm.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🍓 Strawberry</h3><p class="muted">A sweet little berry.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🍄 Mushroom</h3><p class="muted">A cute woodland mushroom.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🐝 Bee</h3><p class="muted">A tiny buzzy friend.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🦋 Butterfly</h3><p class="muted">A colorful little butterfly.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🐸 Frog</h3><p class="muted">A cute little frog.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🌈 Rainbow</h3><p class="muted">A bright rainbow charm.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>📖 Crochet Bookmark</h3><p class="muted">A handmade page marker.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>✨ Mini Bag Charm</h3><p class="muted">A tiny charm for a bag or backpack.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>💐 Mini Flower Bouquet</h3><p class="muted">A tiny bouquet made to last.</p><button class="btn" onclick="show('pre')">Reserve</button></article>
+  </div>
+  <h2>🎃 Fall & Halloween Collection</h2><div class="grid">
+    <article class="card"><h3>🍂 Leaf Charm</h3><p class="muted">A cozy autumn leaf charm.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🎃 Pumpkin</h3><p class="muted">A classic little fall pumpkin.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>👻 Ghost</h3><p class="muted">A cute spooky ghost.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🌰 Acorn</h3><p class="muted">A tiny woodland acorn.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🕸️ Spiderweb</h3><p class="muted">A spooky spiderweb accent.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🦇 Bat</h3><p class="muted">A little Halloween bat.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🐈‍⬛ Black Cat</h3><p class="muted">A spooky-cute black cat.</p><button class="btn" onclick="show('pre')">Reserve</button></article>
+  </div>
+  <h2>🦃 Thanksgiving Collection</h2><div class="grid"><article class="card"><h3>🦃 Turkey</h3><p class="muted">A cute Thanksgiving turkey.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🌽 Corn</h3><p class="muted">A tiny harvest corn charm.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🥧 Pie</h3><p class="muted">A sweet little holiday pie.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🍎 Apple</h3><p class="muted">A tiny autumn apple.</p><button class="btn" onclick="show('pre')">Reserve</button></article></div>
+  <h2>🎄 Christmas Collection</h2><div class="grid"><article class="card"><h3>🎄 Tree</h3><p class="muted">A festive little Christmas tree.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>⭐ Star</h3><p class="muted">A bright holiday star.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🎅 Santa Hat</h3><p class="muted">A tiny Santa hat.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🍬 Candy Cane</h3><p class="muted">A classic striped candy cane.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>❄️ Snowflake</h3><p class="muted">A delicate winter snowflake.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🧦 Stocking</h3><p class="muted">A tiny festive stocking.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🔔 Bell</h3><p class="muted">A cheerful holiday bell.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🦌 Reindeer</h3><p class="muted">A sweet little reindeer.</p><button class="btn" onclick="show('pre')">Reserve</button></article></div>
+  <h2>❄️ Winter Collection</h2><div class="grid"><article class="card"><h3>⛄ Snowman</h3><p class="muted">A cute snowy friend.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>❄️ Snowflake</h3><p class="muted">A wintry snowflake.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🧤 Mitten</h3><p class="muted">A tiny cozy mitten.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>☕ Mug Charm</h3><p class="muted">A cozy winter mug charm.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🧣 Scarf Charm</h3><p class="muted">A tiny warm scarf charm.</p><button class="btn" onclick="show('pre')">Reserve</button></article></div>
+  <h2>💗 Valentine's Collection</h2><div class="grid"><article class="card"><h3>❤️ Heart</h3><p class="muted">A sweet handmade heart.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>💌 Envelope</h3><p class="muted">A tiny love-letter envelope.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🌹 Rose</h3><p class="muted">A little everlasting rose.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🍓 Valentine Strawberry</h3><p class="muted">A sweet strawberry for Valentine's Day.</p><button class="btn" onclick="show('pre')">Reserve</button></article></div>
+  <h2>🌷 Spring Collection</h2><div class="grid"><article class="card"><h3>🌷 Tulip</h3><p class="muted">A cheerful spring tulip.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🌼 Daisy</h3><p class="muted">A bright little daisy.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🐣 Chick</h3><p class="muted">A tiny spring chick.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🐰 Bunny</h3><p class="muted">A sweet spring bunny.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🍃 Leaf</h3><p class="muted">A fresh little spring leaf.</p><button class="btn" onclick="show('pre')">Reserve</button></article></div>
+  <h2>🍋 Summer Collection</h2><div class="grid"><article class="card"><h3>☀️ Sun</h3><p class="muted">A sunny summer charm.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🍉 Watermelon</h3><p class="muted">A juicy summer favorite.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🍋 Lemon</h3><p class="muted">A bright citrus charm.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🍒 Cherries</h3><p class="muted">A sweet pair of cherries.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🌴 Palm Tree</h3><p class="muted">A tiny tropical palm.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🌊 Wave</h3><p class="muted">A little ocean-inspired wave.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🐚 Seashell</h3><p class="muted">A tiny beachy seashell.</p><button class="btn" onclick="show('pre')">Reserve</button></article></div>
+  <h2>☀️ Sunbeam Signature Collection</h2><div class="grid"><article class="card"><h3>☀️ Sunbeam Keychain</h3><p class="muted">A signature Sunbeam Stitches charm.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🌈 Sunbeam Rainbow</h3><p class="muted">A bright signature rainbow.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>🌻 Sunflower Scrunchie</h3><p class="muted">A sunny twist on a customer favorite.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>☀️ Sunshine Bag Charm</h3><p class="muted">A cheerful charm for your favorite bag.</p><button class="btn" onclick="show('pre')">Reserve</button></article><article class="card"><h3>💐 Sunbeam Flower Bouquet</h3><p class="muted">A tiny bouquet that never wilts.</p><button class="btn" onclick="show('pre')">Reserve</button></article></div>
+</section>
+
+<section id="pre" class="section hidden">
+  <h2>🛍️ Pre-Order / Hold</h2><p class="muted">Reserve something to pick up and pay for at yoga. Submitting this form opens a text message addressed to Sunbeam Stitches.</p>
+  <form class="form" onsubmit="sendPre(event)"><input id="preName" required placeholder="Your name"><input id="preContact" required placeholder="Best way to contact you"><select id="preItem" required><option value="">Choose an item</option><option>Flower Keychain — $3</option><option>Little Scrunchie — $4</option><option>Big Scrunchie — $5</option><option>Simple Bracelet — $4</option><option>Maple Leaf Coaster — $7</option><option>Mini Flower</option><option>Sunflower</option><option>Mini Sun</option><option>Strawberry</option><option>Mushroom</option><option>Bee</option><option>Butterfly</option><option>Frog</option><option>Rainbow</option><option>Crochet Bookmark</option><option>Mini Bag Charm</option><option>Mini Flower Bouquet</option><option>Leaf Charm</option><option>Pumpkin</option><option>Ghost</option><option>Acorn</option><option>Spiderweb</option><option>Bat</option><option>Black Cat</option><option>Turkey</option><option>Corn</option><option>Pie</option><option>Apple</option><option>Tree</option><option>Star</option><option>Santa Hat</option><option>Candy Cane</option><option>Snowflake</option><option>Stocking</option><option>Bell</option><option>Reindeer</option><option>Snowman</option><option>Mitten</option><option>Mug Charm</option><option>Scarf Charm</option><option>Heart</option><option>Envelope</option><option>Rose</option><option>Valentine Strawberry</option><option>Tulip</option><option>Daisy</option><option>Chick</option><option>Bunny</option><option>Leaf</option><option>Sun</option><option>Watermelon</option><option>Lemon</option><option>Cherries</option><option>Palm Tree</option><option>Wave</option><option>Seashell</option><option>Sunbeam Keychain</option><option>Sunbeam Rainbow</option><option>Sunflower Scrunchie</option><option>Sunshine Bag Charm</option><option>Sunbeam Flower Bouquet</option></select><input id="preQty" type="number" min="1" max="20" value="1" required><textarea id="preNotes" placeholder="Color / notes"></textarea><button class="btn" type="submit">Text My Order ☀️</button></form>
+  <div id="thanks" class="notice hidden"><b>Your text message is ready!</b> Your phone's messaging app should open with the order filled in.</div>
+</section>
+<section id="custom" class="section hidden"><h2>🎨 Custom Orders</h2><p class="muted">Have an idea? Tell Mac what you want, and we'll talk through colors, size, price, and pickup at yoga.</p><form class="form" onsubmit="sendCustom(event)"><input id="customName" required placeholder="Your name"><input id="customContact" required placeholder="Best way to contact you"><input id="customItem" required placeholder="What would you like crocheted?"><input id="customColors" placeholder="Colors / theme"><textarea id="customIdea" placeholder="Tell me about your idea"></textarea><button class="btn" type="submit">Text Custom Request 🌿</button></form><div id="customThanks" class="notice hidden"><b>Your text message is ready!</b> Your phone's messaging app should open with the custom request filled in.</div></section>
+
+<footer>☀️ Sunbeam Stitches · made by Mac · Local yoga pickup only</footer>
+
+<script>
+function show(id){document.querySelectorAll('section[id]').forEach(function(x){x.classList.add('hidden')});var target=document.getElementById(id);if(target){target.classList.remove('hidden');window.scrollTo(0,0)}}
+function openText(message,noticeId){var sms='sms:+18622680038?body='+encodeURIComponent(message);window.location.href=sms;var notice=document.getElementById(noticeId);if(notice){notice.classList.remove('hidden')}}
+function sendPre(e){e.preventDefault();var name=document.getElementById('preName').value,contact=document.getElementById('preContact').value,item=document.getElementById('preItem').value,qty=document.getElementById('preQty').value,notes=document.getElementById('preNotes').value||'None';openText('SUNBEAM STITCHES PRE-ORDER\nName: '+name+'\nContact: '+contact+'\nItem: '+item+'\nQuantity: '+qty+'\nNotes: '+notes+'\nPickup: Yoga event','thanks')}
+function sendCustom(e){e.preventDefault();var name=document.getElementById('customName').value,contact=document.getElementById('customContact').value,item=document.getElementById('customItem').value,colors=document.getElementById('customColors').value||'Not specified',idea=document.getElementById('customIdea').value||'No additional details';openText('SUNBEAM STITCHES CUSTOM ORDER\nName: '+name+'\nContact: '+contact+'\nRequest: '+item+'\nColors/theme: '+colors+'\nIdea: '+idea+'\nPickup: Yoga event','customThanks')}
+</script>
+</body>
+</html>
